@@ -8,16 +8,45 @@ import RoweTablecommon from "./RoweTablecommon";
 export default function Table(props){
 
     let currentPage = props.currentPage
-    let dataForRows = props.dataForRows
+    let fetchLink = props.fetchLink
+
+    const [ tableRowsData, settableRowsData ] = useState([])
+
+    useEffect(() => {
+        fetch( fetchLink, {
+        method: "GET",
+        headers: {"Accept": "application/json"}
+      })
+                .then( res => { return res.json(); })
+                .then( data => settableRowsData( data ))
+                .catch(err => console.log(err))
+            }, [])
 
 
-    return(
+    function rowsToRender(rowComponent){
+        return(            
+            <div className="cards-container-main">
+                { tableRowsData.map( row => <rowComponent rowData={row}/> )}  
+            </div>)
 
-        <div>
-            
+    }
+
+    if(currentPage == "homePage"){
 
 
-        </div>
+        
+                return(
+                    <div>home Page table here
+                        <div className="cards-container-main">
+                            { tableRowsData.map( row => <RowTableHomePage rowData={row}/> )}  
+                        </div>
+                    </div>
 
-    )
+    
+        )
+    }
+
+
+
+
 }
