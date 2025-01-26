@@ -22,7 +22,8 @@ export default function Table(props){
                 .catch(err => console.log(err))
             }, [])
 
-
+            
+//maybe dynamic comp name ?
     function rowsToRender(rowComponent){
         return(            
             <div className="cards-container-main">
@@ -40,6 +41,8 @@ export default function Table(props){
                         <div className="cards-container-main">
                             { tableRowsData.map( row => <RowTableHomePage rowData={row}/> )}  
                         </div>
+
+
                     </div>
 
     

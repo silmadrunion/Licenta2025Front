@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import RoweTablecommon from "../../../shared/RoweTablecommon"
 
-export default function RowTableHomePage(rowData){
+export default function RowTableHomePage(props){
 
-
+    let rowData = props.rowData
 
 
 
     return(
         <div>RowTableHomePage
         
-        <RoweTablecommon />
+        <RoweTablecommon rowData={rowData}/>
         </div>
     )
 }
