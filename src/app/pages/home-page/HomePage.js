@@ -20,16 +20,20 @@ let currentPage = "homePage";
 
     return (
         <div>
-            <div>
-                <h3>All Games</h3>
-                <AddGames />
-                <SortFilterSearch />
+
+            <div className='flex'>
+                <h3 className='title'>All Games</h3>
+                <div className='grow'></div>
+                <div className='flex felx-row'>
+                    <AddGames />
+                    <SortFilterSearch />
+                </div>
+
             </div>
 
             <div> 
                 <Table currentPage={currentPage} fetchLink={'http://127.0.0.1:5000/listings'} />
             </div>
-
 
         </div>
     );

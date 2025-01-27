@@ -1,5 +1,4 @@
 
-//import './App.css';
 import Header from "./pages/header/Header";
 import Body from "./pages/body/Body";
 import Footer from "./pages/footer/Footer";
@@ -35,7 +34,7 @@ function updateAppState(currentPage){
     <div> 
       <Header />
       <Body />
-      <Footer />
+      {/* <Footer /> */}
     </div>
 
   );

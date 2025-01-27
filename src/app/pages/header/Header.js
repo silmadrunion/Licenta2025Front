@@ -4,9 +4,9 @@ import ProfileIcon from "./components/ProfileIcon"
 
 export default function Header() {
     return (
-        <div>
-            <span>
-            <img src={require('../../../assets/images/logo.png')} />
+        <div className=" flex header flex-row flex-nowrap ">
+            <span className="img_header_container">
+            <img src={require('../../../assets/images/Untitled.png')} className="img_header"/>
             </span>
             <Navigation />
             <ProfileIcon />
