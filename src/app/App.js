@@ -1,5 +1,3 @@
-
-import Header from "./pages/header/Header";
 import Body from "./pages/body/Body";
 import Footer from "./pages/footer/Footer";
 import React, { useState, useEffect } from "react";
@@ -32,7 +30,6 @@ function updateAppState(currentPage){
   return (
 
     <div> 
-      <Header />
       <Body />
       {/* <Footer /> */}
     </div>

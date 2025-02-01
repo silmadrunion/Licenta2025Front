@@ -42,7 +42,7 @@ code {
 .body{
   background-color: #352D39;
   color: #FFFFFF;
-  padding: 1rem 2rem 0rem 2rem;
+  /* padding: 0rem 2rem 0rem 2rem; */
 }
 
 .title{

@@ -19,7 +19,7 @@ export default function HomePage() {
 let currentPage = "homePage";
 
     return (
-        <div>
+        <div className='px-10'>
 
             <div className='flex'>
                 <h3 className='title'>All Games</h3>

@@ -1,7 +1,7 @@
-export default function MyLibrary() {
+export default function MyListings() {
 
 
     return (
-        <div>MyLibrary</div>
+        <div>MyListings</div>
     )
 }
