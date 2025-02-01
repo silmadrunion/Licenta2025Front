@@ -5,12 +5,12 @@ import { faMagnifyingGlass, faArrowUpShortWide, faFilter} from '@fortawesome/fre
 export default function SortFilterSearch(){
 
     return(
-        <div >
-            <input  type="text" placeholder="text test"/>
-            <span>
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                <FontAwesomeIcon icon={faArrowUpShortWide} />
-                <FontAwesomeIcon icon={faFilter} /> 
+        <div className='block'>
+            <input className='w-5/6 ' type="text" placeholder="Search for games to trade"/>
+            <span >
+                <FontAwesomeIcon className='ml-2 w-5 h-5 text-[#B1EDE8]' icon={faMagnifyingGlass} />
+                <FontAwesomeIcon className='ml-2 w-5 h-5 text-[#B1EDE8]' icon={faArrowUpShortWide} />
+                <FontAwesomeIcon className='ml-2 w-5 h-5 text-[#B1EDE8]' icon={faFilter} /> 
             </span>
         </div>
     )

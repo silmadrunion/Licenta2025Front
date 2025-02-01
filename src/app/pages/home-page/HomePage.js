@@ -6,7 +6,7 @@ import Table from '../../shared/Table';
 
 export default function HomePage() {
 
-    // //state 
+    
     const [HomePageState , setHomePageState ] = useState({ 
         dataForRows : []
     });      
@@ -19,12 +19,12 @@ export default function HomePage() {
 let currentPage = "homePage";
 
     return (
-        <div className='px-10'>
+        <div className='px-10 mt-4'>
 
-            <div className='flex'>
-                <h3 className='title'>All Games</h3>
-                <div className='grow'></div>
-                <div className='flex felx-row'>
+            <div className='flex justify-between'>
+                <h3 className=' mb-4 text-3xl'>All Games</h3>
+                
+                <div className='flex   '>
                     <AddGames />
                     <SortFilterSearch />
                 </div>

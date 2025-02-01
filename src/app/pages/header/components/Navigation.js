@@ -10,17 +10,17 @@ export default function Navigation() {
     }
 
     return (
-    <span className="grow felx flex-row cards_navigation_container"> 
-        <button style={{backgroundColor: "#6A9491"}} className="cards_navigation cards_navigation_active" id="btnAllGames" onClick={handleClickNavigate}>
+    <span className="grow felx flex-row content-end"> 
+        <button  className="bg-[#6A9491] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnAllGames" onClick={handleClickNavigate}>
             <Link to="/home">Home</Link>
         </button>
-        <button style={{backgroundColor: "#D95865"}} className="cards_navigation" id="btnMyListings" onClick={handleClickNavigate}>
+        <button className="bg-[#D95865] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnMyListings" onClick={handleClickNavigate}>
             <Link to="/listings">My Listings</Link>
         </button>
-        <button style={{backgroundColor: "#B166BB"}} className="cards_navigation" id="btnMyOffers" onClick={handleClickNavigate}>
+        <button className="bg-[#B166BB] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnMyOffers" onClick={handleClickNavigate}>
             <Link to="/offers">My Offers</Link>
         </button>
-        <button style={{backgroundColor: "#7066BB"}} className="cards_navigation" id="btnMyLibrary" onClick={handleClickNavigate}>
+        <button className="bg-[#7066BB] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnMyLibrary" onClick={handleClickNavigate}>
             <Link to="/library">My Library</Link>
         </button>
     </span>

@@ -13,11 +13,6 @@ code {
 }
 
 
-
-
-
-
-
 /* test */
 .test{
   border:1px solid red;
@@ -25,31 +20,8 @@ code {
 
 
 
-
-
-
-
-
-
-
-
 /* general display */
 
-.white{
-  color: white;
-}
-
-.body{
-  background-color: #352D39;
-  color: #FFFFFF;
-  /* padding: 0rem 2rem 0rem 2rem; */
-}
-
-.title{
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
 
 .icon{
   width: 2.5rem;
@@ -60,76 +32,25 @@ code {
 
 
 
-
-
-
-
-
-
-
 /* custom class profile comp */
-.icon_profile{
-  width: 2rem;
-  height: 1.5rem;
-}
-
 
 
 /* custom class header comp */
-.header{
-  background-color: #6D435A;
-  padding: 1rem 2rem 0rem 2rem;
-}
-
-.img_header_container{
-
-}
-
 .img_header{
   width: 8rem;
   height: auto;
-  border-radius: 25%;
-  margin-bottom: 1rem;
 }
-
-
-
 
 
 
 /* custom class navigation comp */
-.cards_navigation_container{
-  align-content: end;
-}
-
-.cards_navigation{
-  padding: 0.5rem 2rem 0.5rem 2rem;
-  border-radius: 1rem 1rem 0rem 0rem;
-  margin-left: 0.5rem; 
-  color: white;
-  font-weight: 800;
-}
-
 .cards_navigation_active{
   padding: 1.5rem 2rem 0.5rem 2rem;
 
 }
 
 
-
-
-
-
 /* custom class profile comp */
-.profile_icon{
-  padding: 0.5rem;
-}
-
-
-
-
-
-
 
 
 /* custom class home page comp */
