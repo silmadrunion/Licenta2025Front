@@ -11,17 +11,17 @@ export default function Navigation() {
 
     return (
     <span className="grow felx flex-row content-end"> 
-        <button  className="bg-[#6A9491] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnAllGames" onClick={handleClickNavigate}>
-            <Link to="/home">Home</Link>
+        <button id="btnAllGames" onClick={handleClickNavigate}>
+            <Link className="bg-[#6A9491] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" to="/home">Home</Link>
         </button>
-        <button className="bg-[#D95865] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnMyListings" onClick={handleClickNavigate}>
-            <Link to="/listings">My Listings</Link>
+        <button id="btnMyListings" onClick={handleClickNavigate}>
+            <Link className="bg-[#D95865] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" to="/listings">My Listings</Link>
         </button>
-        <button className="bg-[#B166BB] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnMyOffers" onClick={handleClickNavigate}>
-            <Link to="/offers">My Offers</Link>
+        <button id="btnMyOffers" onClick={handleClickNavigate}>
+            <Link className="bg-[#B166BB] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" to="/offers">My Offers</Link>
         </button>
-        <button className="bg-[#7066BB] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" id="btnMyLibrary" onClick={handleClickNavigate}>
-            <Link to="/library">My Library</Link>
+        <button id="btnMyLibrary" onClick={handleClickNavigate}>
+            <Link className="bg-[#7066BB] px-4 py-2 ml-2 w-35 text-white font-semibold rounded-t-lg" to="/library">My Library</Link>
         </button>
     </span>
     )

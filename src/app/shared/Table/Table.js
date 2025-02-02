@@ -46,7 +46,6 @@ export default function Table(props){
         case "homePage": 
             if(tableRowsData.length !== 0){
                 return <div>{ tableRowsData.map( row => <RowTableHomePage rowData={row}/> )} </div>
-
             } else {
                 return <EmptyRow text={"No games available for trade. Add a game to be exchanged."}/>   
             }  

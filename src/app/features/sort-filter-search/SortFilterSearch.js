@@ -6,6 +6,8 @@ export default function SortFilterSearch(props){
 
     let currentPage = props.currentPage
 
+    //page based add game functionality here 
+
     return(
         <div className='flex border-2 border-[#B1EDE8] rounded-md p-4 h-8'>
             <input className='min-w-80 bg-[#352D39] text-[#FFFCF9] h-5 self-center' type="text" placeholder="Search for games to trade"/>

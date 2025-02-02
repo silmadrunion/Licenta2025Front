@@ -12,7 +12,6 @@ export default function MyOffers() {
             <div className='flex justify-between'>
                 <h3 className=' mb-4 text-3xl'>My Offers</h3>
                 <div className='flex   '>
-                    <AddGames currentPage={currentPage} />
                     <SortFilterSearch currentPage={currentPage}/>
                 </div>
             </div>

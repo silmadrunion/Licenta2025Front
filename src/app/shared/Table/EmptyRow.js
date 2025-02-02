@@ -13,9 +13,9 @@ export default function EmptyRow(props){
         )
     } else {
         return (
-            <div className="flex flex-col  bg-[#515861] px-8 py-8 border-4 border-[#B1EDE8] rounded-lg " >
+            <div className="flex  bg-[#515861] px-8 py-8 border-4 border-[#B1EDE8] rounded-lg " >
                 <AddGames />
-                <p>{text}</p>
+                <p className="pt-1">{text}</p>
             </div>
         )
     }
