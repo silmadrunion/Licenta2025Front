@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import RowTablecommon from "../../../shared/RowTablecommon"
+import RowTablecommon from "../../../shared/Table/RowTablecommon"
 import ProposeTrade from "../../../features/propose-trade/ProposeTrade"
 import ViewGame from "../../../features/view-game/ViewGame"
 
