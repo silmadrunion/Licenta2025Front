@@ -18,7 +18,7 @@ let currentPage = "homePage";
                 </div>
             </div>
             <div> 
-                <Table currentPage={currentPage} fetchLink={'http://127.0.0.1:5000/listings'} />
+                <Table currentPage={currentPage} fetchLink={'http://127.0.0.1:5000/listing'} />
             </div>
         </div>
     );

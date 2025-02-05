@@ -12,8 +12,10 @@ export default function AddGames(props){
 
 
     return(
-        <div className='mr-4 inline flex  pt-2'>
+
+        <button className='mr-4 inline flex  pt-2'>
             <FontAwesomeIcon className='w-5 h-5 text-[#B1EDE8]' icon={faCirclePlus} />
-        </div>
+        </button>
+
     )
 }

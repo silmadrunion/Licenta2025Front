@@ -17,7 +17,7 @@ export default function MyListings() {
             </div>
             <div> 
             {/* NEEDS LINK HERE */}
-                <Table currentPage={currentPage} fetchLink={'http://127.0.0.1:5000/'} />
+                <Table currentPage={currentPage} fetchLink={'http://127.0.0.1:5000/listing?user-id=somethinng'} />
             </div>
         </div>
     );

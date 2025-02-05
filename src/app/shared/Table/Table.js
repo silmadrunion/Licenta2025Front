@@ -23,25 +23,7 @@ export default function Table(props){
                 .catch(err => console.log(err))
             }, [])
 
-//work in progress not used 
-    // function rowsToRender(rowComponent){
-    //     
-    //     if(tableRowsData.length != 0){
-    //         console.log("not empty")   
-    //         return(            
-    //             <div className="cards-container-main">
-    //                 { tableRowsData.map( row => <rowComponent rowData={row}/> )}  
-    //             </div>)
-    
-    //     }else {
-    //         console.log("empty")   
-    //         return <EmptyRow/>   
-    
-    //     }
-    // }
 
-
-    //maybe dynamic comp name on map?
     switch(currentPage){
         case "homePage": 
             if(tableRowsData.length !== 0){
