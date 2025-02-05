@@ -6,11 +6,6 @@ import Table from '../../shared/Table/Table';
 
 export default function HomePage() {
 
-    
-    // const [HomePageState , setHomePageState ] = useState({ 
-    //     dataForRows : []
-    // });      
-
 let currentPage = "homePage";
 
     return (
