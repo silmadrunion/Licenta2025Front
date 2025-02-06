@@ -3,14 +3,14 @@ export default function RowTablecommon(props){
     let rowData = props.rowData
 
     return(
-        <div className="grow flex justify-start">
+        <div className=" flex grow justify-start">
             <img className="px-4"></img>
             <div className="flex px-4">
                 <div className="flex pl-4 flex-col">
                     <h4 className="font-bold">{rowData.gameName}</h4>
                     <p>{rowData.gameDetails.gameDescription}</p>
                 </div>
-                <div class="flex flex-row pl-4">
+                <div className="flex flex-row pl-4">
                     <div className="flex flex-col pl-4">
                         <div className="pl-2">
                             <p className="font-bold">Players</p>

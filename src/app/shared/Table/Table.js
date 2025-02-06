@@ -20,14 +20,14 @@ export default function Table(props){
       })
                 .then( res => { return res.json(); })
                 .then( data => settableRowsData( data ))
-                .catch(err => console.log(err))
-            }, [])
+                .catch( err => console.log(err))
+        }, [])
 
 
     switch(currentPage){
         case "homePage": 
             if(tableRowsData.length !== 0){
-                return <div>{ tableRowsData.map( row => <RowTableHomePage rowData={row}/> )} </div>
+                return <div>{ tableRowsData.map( row => <RowTableHomePage rowData={row} currentPage={currentPage}/>  )} </div>
             } else {
                 return <EmptyRow text={"No games available for trade. Add a game to be exchanged."}/>   
             }  
@@ -36,7 +36,7 @@ export default function Table(props){
             if(tableRowsData.length !== 0){
                 return(
                     <div>
-                        { tableRowsData.map( row => <RowTableMyListings rowData={row}/> )}  
+                        { tableRowsData.map( row => <RowTableMyListings rowData={row} currentPage={currentPage}/> )}  
                     </div>
                 )
             } else {
@@ -47,7 +47,7 @@ export default function Table(props){
             if(tableRowsData.length !== 0){
                 return(
                     <div>
-                        { tableRowsData.map( row => <RowTableMyLibrary rowData={row}/> )}  
+                        { tableRowsData.map( row => <RowTableMyLibrary rowData={row} currentPage={currentPage}/> )}  
                     </div>
                 )
             } else {
@@ -58,7 +58,7 @@ export default function Table(props){
             if(tableRowsData.length !== 0){
                 return(
                     <div>
-                        { tableRowsData.map( row => <RowTableMyOffers rowData={row}/> )}  
+                        { tableRowsData.map( row => <RowTableMyOffers rowData={row} currentPage={currentPage}/> )}  
                     </div>
                 )
             } else {

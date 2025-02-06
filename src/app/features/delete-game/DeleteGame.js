@@ -1,10 +1,14 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
+export default function DeleteGame(){
 
-export default function AddGames(){
-
+    
     return(
-        <div>
-            DeleteGame
+        <div className='flex'>
+            <button >
+                <FontAwesomeIcon icon={faTrash} />
+            </button>
         </div>
     )
 }
