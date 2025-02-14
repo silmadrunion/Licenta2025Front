@@ -34,9 +34,6 @@ export default function AddGames(props){
             </button>
             { addGame ? modal : ( <div className="hidden"/> )}
         </div>
-
-        
-
     )
     
 }

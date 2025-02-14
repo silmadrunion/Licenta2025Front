@@ -1,91 +1,103 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft,faArrowRight,faStar } from '@fortawesome/free-solid-svg-icons'
+
 export default function ViewGame(props){
 
-
+    let gameData = props.gameData
+    console.log("here")
+    console.log(gameData)
     return (
-        <div className="modal">
-            <div>
-                <div>
-                    <img></img>
-                    <button>Left</button>
-                    <button>Right</button>
-                </div>
-                <div>
-                    <div>
-                        <h4>{props.gameTitle}</h4>
-                        <p>{props.gameDescription}</p>
+
+
+
+        <div className=" flex ">
+            <div className="flex flex-col w-1/5 mr-6">
+                    <div className=" h-3/6 border-2 border-indigo-500">img here</div>
+                    {/* <img></img> */}
+                    <div className='flex justify-around mt-4'>
+                        <button><FontAwesomeIcon icon={faArrowLeft}  className='text-[#B1EDE8] text-3xl'/></button>
+                        <button><FontAwesomeIcon icon={faArrowRight} className='text-[#B1EDE8] text-3xl'/></button>
                     </div>
-                    <div>
-                        <div>
-                            <div>
-                                <p>Players</p>
-                                <p>{props.gamePlayerNr}</p>
-                            </div>
-                            <div>
-                                <p>Recommended Age</p>
-                                <p>{props.gameRecommendedAge}+</p>
-                            </div>
-                            <div>
-                                <p>Playing Time</p>
-                                <p>{props.gamePlayTime}+</p>
-                            </div>
-                            <div>
-                                <p>Complexity</p>
-                                <p>{props.gameComplexity} / 5</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <p>Designers</p>
-                                <p>{props.gameDesigners}+</p>
-                            </div>
-                            <div>
-                                <p>Artists</p>
-                                <p>{props.gameArtists}</p>
-                            </div>
-                            <div>
-                                <p>Board Game Geek rating </p>
-                                <i>
-                                    <p>{props.gameBGGRating}</p>
-                                </i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+
             </div>
 
-            <div>
-                <div>
-                    <p>Mechanisms</p>
-                    <p>{props.gameMechanisms}+</p>
+            <div className="flex  flex-col">
+                <div className="flex flex-col">
+                        <div>
+                            <h4 className='text-xl font-bold mb-4 '>{gameData.gameDetails.gameName}</h4>
+                            <p className=' mb-4'>{gameData.gameDetails.gameDescription}</p>
+                        </div>
+                        <div className='flex flex-row justify-between mb-6'>
+                            <div className='grid gap-1'>
+                                <p>Players {gameData.gameDetails.gamePlayerNo}</p>
+                                <p>Recommended Age {gameData.gameDetails.gameRecommandedAge}+</p>
+                                <p>Playing Time {gameData.gameDetails.gamePlayTime}</p>
+                                <p>Complexity {gameData.gameDetails.gameComplexity} / 5</p>
+                            </div>
+                            <div className='grid gap-1'>
+                                <div>
+                                    <p className='font-bold'>Designers</p>
+                                    <div>
+                                        { gameData.gameDetails.gameDesigners.map( dessigner => <p>{dessigner}</p> ) }
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <p className='font-bold'>Artists</p>
+                                    <div>
+                                        { gameData.gameDetails.gameArtists.map( artist => <p>{artist}</p> ) }
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className='flex flex-col justify-center font-bold mr-16'>
+                                <p className='align-middle font-bold'>Board Game Geek rating </p>
+                                <p className='text-bold self-center'> <FontAwesomeIcon icon={faStar} className='text-[#B1EDE8] text-3xl'/> {gameData.gameDetails.gameBGGRating}</p>
+                            </div>  
+                        </div>    
+            
                 </div>
-                <div>
-                    <p>Categories</p>
-                    <p>{props.gameCategories}</p>
-                </div>    
-                <div className="seller-container">
-                    <div className="left">
-                        <h4>Game Condition</h4>
-                        <div>                        
-                            <p>Description : </p>
-                            <p>{props.gameOwnerDescription}</p>
-                        </div>
+
+                <div className="flex flex-row">
+                    <div className="flex flex-row grow justify-between mr-6 ">
                         <div>
-                            <span>Pictures of the game provided:</span>
-                            <span>{props.gameOwnerPicturesProvided}</span>
+                            <p className='font-bold'>Mechanisms</p>
+                                <div>
+                                    { gameData.gameDetails.gameMechanisms.map( mechanism => <p>{mechanism}</p> ) }
+                                </div>                
                         </div>
+
+                        <div>
+                            <p className='font-bold'>Categories</p>
+                            <div>
+                                { gameData.gameDetails.gameCategories.map( category => <p>{category}</p> ) }
+                            </div>  
+                        </div>  
                     </div>
-                    <div className="right">
-                        <div>
-                            <p>Seller</p>
-                            <img></img>
+ 
+
+                    <div className="flex flex-row w-3/6 ml-6 border-2 border-[#B1EDE8] rounded-md p-4 ">
+                        <div className=" w-4/6 grid gap-1 mr-4">
+                            <h4 className='font-bold'>Game Condition</h4>
+                            <div>                        
+                                <p className='font-bold'>Description : </p>
+                                <p>{gameData.gameDetails.gameDescriptionByClient}</p>
+                            </div>
+                            <span className='font-bold'>Pictures of the game provided: Yes</span>
                         </div>
-                        <div>
-                            <p>{props.sellerName}</p>
-                            <p>Rating: {props.sellerRating}</p>
+                        <div className=" w-2/6 grid gap-1">
+                            <div>
+                                <p className='font-bold'>Seller</p>
+                                <div className=" h-40  border-2 border-indigo-500">img here</div>
+                                <img></img>
+                            </div>
+                            <div>
+                                <p>{gameData.gameUserDetails.gameUserName}</p>
+                                <p className='font-bold'>Rating: {gameData.gameUserDetails.gameUserRating}</p>
+                            </div>
                         </div>
-                    </div>
-                </div>            
+                    </div>            
+                </div>
             </div>
 
 
