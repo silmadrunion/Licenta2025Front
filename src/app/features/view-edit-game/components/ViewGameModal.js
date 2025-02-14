@@ -28,7 +28,7 @@ export default function ViewGameModal(props){
             <div className='bg-[#6D435A] absolute place-self-center p-6 px-8 rounded-md flex flex-col'>
                 <div className='flex flex-row'> 
                     { ViewGameModal ? <ViewGame gameData={ViewGameModal}/> : ( <div className="hidden"/> ) }
-                    { props.action == 'viewGame' ? ( <div className="hidden"/> ) : AddGameSideTable  }
+                    { props.action == 'viewGame' ? ( <div className="hidden"/> ) : <AddGameSideTable />  }
                 </div>
                 <div className='flex flex-row justify-end mt-6'>
                     <button className='border-1 bg-[#6e908d] p-1 px-4  rounded-full' onClick={ ( ) => {props.closeModal()}}>Cancel</button>

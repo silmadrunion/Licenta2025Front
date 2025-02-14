@@ -23,8 +23,9 @@ export default function AddGames(props){
                 libraryPage
             </div>
     } else {
-        modal = <AddGamesFromLibrary  closeModal={closeModal}/>
+        modal = <AddGamesFromLibrary  closeModal={closeModal} action={"addGame"}/>
     }
+        
 
 
     return(
@@ -32,7 +33,11 @@ export default function AddGames(props){
             <button className='mr-4 inline flex  pt-2' onClick={ ( ) => {setAddGame(true)} }>
                 <FontAwesomeIcon className='w-5 h-5 text-[#B1EDE8]' icon={faCirclePlus}  />
             </button>
-            { addGame ? modal : ( <div className="hidden"/> )}
+
+                { addGame ? modal : ( <div className="hidden"/> )}
+
+
+
         </div>
     )
     
