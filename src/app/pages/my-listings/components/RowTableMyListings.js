@@ -1,10 +1,9 @@
 import RowTablecommon from "../../../shared/Table/RowTablecommon"
 import DeleteGame from "../../../features/delete-game/DeleteGame"
-import ViewEditGame from "../../../features/view-edit-game/ViewEditGame"
+// import ViewEditGame from "../../../features/view-edit-game/ViewEditGame"
 import RowTableMyListingsOffers from "./RowTableMyListingsOffers"
 import React, {useState} from 'react'
-
-
+import ViewGame from "../../../features/view-game/ViewGame"
 
 export default function RowTableMyListings(props){
 
@@ -44,7 +43,7 @@ export default function RowTableMyListings(props){
                 <RowTablecommon rowData={rowData}/>
 
                 {rowData.offers.length == 0 ?
-                    ( <ViewEditGame  currentPage={currentPage} /> )
+                    ( <ViewGame  currentPage={currentPage} /> )
                     :
                     ( <div className="hidden"/>)
                 }

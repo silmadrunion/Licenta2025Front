@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-import ViewGameModal from './components/ViewGameModal'
+import ViewGameModal from './ViewGameModal'
 
 
 
-export default function ViewEditGame(props) {
+export default function ViewGame(props) {
 
     let currentPage = props.currentPage
     

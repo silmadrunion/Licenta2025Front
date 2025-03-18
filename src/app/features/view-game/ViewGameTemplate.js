@@ -1,14 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft,faArrowRight,faStar } from '@fortawesome/free-solid-svg-icons'
 
-export default function ViewGame(props){
+export default function ViewGameTemplate(props){
 
     let gameData = props.gameData
-    console.log("here")
-    console.log(gameData)
+
     return (
-
-
 
         <div className=" flex ">
             <div className="flex flex-col w-1/5 mr-6">

@@ -1,10 +1,10 @@
-import ViewGame from './ViewGame'
-import AddGameSideTable from '../../add-game/components/AddGameSideTable'
+import ViewGameTemplate from './ViewGameTemplate'
+import AddGameSideTable from "../add-game/components/AddGameSideTable"
 import { useState, useEffect } from 'react'
 
 
 export default function ViewGameModal(props){
-
+    console.log("ViewGameModal")
     const[ ViewGameModal, setViewGameModal] = useState()
 
 
@@ -27,7 +27,7 @@ export default function ViewGameModal(props){
             ></div>
             <div className='bg-[#6D435A] absolute place-self-center p-6 px-8 rounded-md flex flex-col'>
                 <div className='flex flex-row'> 
-                    { ViewGameModal ? <ViewGame gameData={ViewGameModal}/> : ( <div className="hidden"/> ) }
+                    { ViewGameModal ? <ViewGameTemplate gameData={ViewGameModal}/> : ( <div className="hidden"/> ) }
                     { props.action == 'viewGame' ? ( <div className="hidden"/> ) : <AddGameSideTable />  }
                 </div>
                 <div className='flex flex-row justify-end mt-6'>
