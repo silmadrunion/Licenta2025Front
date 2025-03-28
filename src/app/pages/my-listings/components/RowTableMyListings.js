@@ -9,7 +9,7 @@ export default function RowTableMyListings(props){
 
     let rowData = props.rowData
     let currentPage = props.currentPage
-
+    let gameId = props.rowData["_id"]
 
     const [ rowMyListings, setRowMyListings ] = useState(true);
 
