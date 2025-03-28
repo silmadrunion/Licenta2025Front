@@ -2,6 +2,7 @@ export default function RowTablecommon(props){
 
     let rowData = props.rowData
 
+if(rowData.gameDetails !== undefined){
     return(
         <div className=" flex grow justify-start">
             <img className="px-4"></img>
@@ -43,4 +44,7 @@ export default function RowTablecommon(props){
 
         </div>
     )
+} 
+
+
 }

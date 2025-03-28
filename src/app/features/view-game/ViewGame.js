@@ -15,13 +15,15 @@ export default function ViewGame(props) {
         setViewGame(false)
     }
 
+    // to update here so that on propose trade there will be a side grid
+    let action = "viewGame"
         
     return(
         <div className='flex '>
             <button onClick={ () => { setViewGame(!viewGame) } }>
                 <FontAwesomeIcon className='icon' icon={faEye} />
             </button>
-            { viewGame ? <ViewGameModal closeModal={closeModal} action={"viewGame"}/> : ( <div className="hidden"/> )}
+            { viewGame ? <ViewGameModal closeModal={closeModal} action={action}/> : ( <div className="hidden"/> )}
         </div>
         
     )

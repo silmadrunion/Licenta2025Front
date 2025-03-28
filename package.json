@@ -57,5 +57,8 @@
       "localhost",
       ".localhost"
     ]
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.32"
   }
 }

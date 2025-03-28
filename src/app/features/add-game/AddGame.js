@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import AddGamesFromLibrary from "./components/AddGamesFromLibrary"
-
+import AddGamesToLibary from './components/AddGamesToLibary'
 
 export default function AddGames(props){
 
@@ -16,10 +16,7 @@ export default function AddGames(props){
 
     let modal 
     if ( currentPage == "libraryPage"){
-        modal = 
-            <div>
-                libraryPage
-            </div>
+        modal = <AddGamesToLibary closeModal={closeModal} />
     } else {
         modal = <AddGamesFromLibrary  closeModal={closeModal} action={"addGame"}/>
     }

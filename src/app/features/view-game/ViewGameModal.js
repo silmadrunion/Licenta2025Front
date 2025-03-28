@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 
 export default function ViewGameModal(props){
-    console.log("ViewGameModal")
+
     const[ ViewGameModal, setViewGameModal] = useState()
 
 
