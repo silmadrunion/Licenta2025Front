@@ -96,8 +96,6 @@ export default function ViewGameTemplate(props){
                     </div>            
                 </div>
             </div>
-
-
         </div>
     )
 }

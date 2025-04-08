@@ -22,7 +22,6 @@ export default function Table(props){
             .then( res => { return res.json(); })
             .then( data => settableRowsData( data ))
             .catch( err => console.log(err))
-            console.log("GET table here")
         }, [props.rerenderValue])
 
 
@@ -36,7 +35,7 @@ export default function Table(props){
                 .catch( err => console.log(err))
         }   
 
-        console.log(tableRowsData)
+        //console.log(tableRowsData)
 
     switch(currentPage){
         case "homePage": 
