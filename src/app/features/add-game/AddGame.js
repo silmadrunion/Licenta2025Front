@@ -16,7 +16,7 @@ export default function AddGames(props){
 
     let modal 
     if ( currentPage == "libraryPage"){
-        modal = <AddGamesToLibary closeModal={closeModal} />
+        modal = <AddGamesToLibary closeModal={closeModal} refreshTable={props.refreshTable}/>
     } else {
         modal = <AddGamesFromLibrary  closeModal={closeModal} action={"addGame"}/>
     }

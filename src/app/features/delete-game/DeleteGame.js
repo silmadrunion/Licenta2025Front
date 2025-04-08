@@ -13,8 +13,15 @@ export default function DeleteGame(props){
 
     const[ DeleteGame, setDeleteGame] = useState(false)
 
+
+    let link 
+    switch(currentPage){
+        case "libraryPage":
+            link = `http://127.0.0.1:5000//game?game-id=${gameId}`
+    }
+
     function deleteGame(){
-        fetch( `http://127.0.0.1:5000//game?game-id=${gameId}`, {
+        fetch( link, {
             method : "DELETE",
             headers: {"Accept": "application/json"}
         })

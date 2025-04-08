@@ -31,7 +31,10 @@ export default function AddGamesToLibary(props){
             }
         })
       })
-      //props.closeModal()
+        props.closeModal()
+
+        props.refreshTable()
+
     }
 
 

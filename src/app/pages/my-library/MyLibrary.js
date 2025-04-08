@@ -8,34 +8,27 @@ export default function MyLibrary() {
 
     let currentPage = "libraryPage";
 
-    // const[ myLibrary,setMyLibrary] = useState(
-    //     {
-    //         render : 1
-    //     }
-    // )
-    
-    // function updateState(){
-    //     console.log("in function ")
-    //     setMyLibrary({
-    //         ...myLibrary,
-    //             render : myLibrary.render + 1
-    //         })
+    const [ libraryPageState, setLibraryPageState ] = useState(0)
 
-    //     console.log(myLibrary)
-    // }
+
+    function refreshTable(){
+        setLibraryPageState(libraryPageState+1)
+        console.log(libraryPageState)
+    }
 
     return (
         <div className='px-10 mt-4'>
             <div className='flex justify-between'>
                 <h3 className=' mb-4 text-3xl'>My Library</h3>
                 <div className='flex   '>
-                    <AddGames currentPage={currentPage} />
+                {/* NEEDS id HERE */}
+                    <AddGames currentPage={currentPage} refreshTable={refreshTable}/>
                     <SortFilterSearch currentPage={currentPage}/>
                 </div>
             </div>
             <div> 
-            {/* NEEDS LINK HERE */}
-                <Table currentPage={currentPage} fetchLink={'http://127.0.0.1:5000/game?user-id=somethinng'} />
+            {/* NEEDS id HERE */}
+                <Table currentPage={currentPage} fetchLink={'http://127.0.0.1:5000/game?user-id=somethinng'} rerenderValue={libraryPageState}/>
             </div>
         </div>
     );

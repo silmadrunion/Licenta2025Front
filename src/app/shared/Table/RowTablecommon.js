@@ -5,7 +5,8 @@ export default function RowTablecommon(props){
 if(rowData.gameDetails !== undefined){
     return(
         <div className=" flex grow justify-start">
-            <img className="px-4"></img>
+            <img  style={{width:" 6rem"}} className='px-4 h-32  border-2 border-[#B1EDE8]'></img>
+        
             <div className="flex px-4">
                 <div className="flex pl-4 flex-col">
                     <h4 className="font-bold">{rowData.gameName}</h4>
@@ -22,7 +23,7 @@ if(rowData.gameDetails !== undefined){
                             <p className="text-left">{rowData.gameDetails.gameReccommandedAge}</p>
                         </div>
                     </div>
-                    <div class="flex flex-col pl-4">
+                    <div className="flex flex-col pl-4">
                         <div className="pl-2 flex flex-col justify-end">
                             <p className="font-bold">Playing Time</p>
                             <p className="text-left">{rowData.gameDetails.gamePlayTime}+</p>

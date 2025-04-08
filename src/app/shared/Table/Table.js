@@ -13,6 +13,7 @@ export default function Table(props){
 
     const [ tableRowsData, settableRowsData ] = useState([])
 
+    
     useEffect(() => {
         fetch( fetchLink, {
         method: "GET",
@@ -21,7 +22,8 @@ export default function Table(props){
             .then( res => { return res.json(); })
             .then( data => settableRowsData( data ))
             .catch( err => console.log(err))
-        }, [])
+            console.log("GET table here")
+        }, [props.rerenderValue])
 
 
         function updateStateOnDelete(){
@@ -29,16 +31,17 @@ export default function Table(props){
                 method: "GET",
                 headers: {"Accept": "application/json"}
               })
-                    .then( res => { return res.json(); })
-                    .then( data => settableRowsData( data ))
-                    .catch( err => console.log(err))
+                .then( res => { return res.json(); })
+                .then( data => settableRowsData( data ))
+                .catch( err => console.log(err))
         }   
 
+        console.log(tableRowsData)
 
     switch(currentPage){
         case "homePage": 
             if(tableRowsData.length !== 0){
-                return <div>{ tableRowsData.map( row => <RowTableHomePage rowData={row} currentPage={currentPage} handleRefresh={updateStateOnDelete}/>  )} </div>
+                return <div>{ tableRowsData.map( row => <RowTableHomePage rowData={row} currentPage={currentPage} handleRefresh={updateStateOnDelete}/> )} </div>
             } else {
                 return <EmptyRow text={"No games available for trade. Add a game to be exchanged."}/>   
             }  
