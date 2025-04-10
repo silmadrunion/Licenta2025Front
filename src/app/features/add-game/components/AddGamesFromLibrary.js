@@ -22,7 +22,7 @@ export default function AddGamesFromLibrary(props){
     switch(action){
         case "addGame" :
             content = 
-            <div  className=' absolute w-screen h-screen top-0 left-o right-0 bottom-0 flex '  >
+            <div  className='absolute w-screen h-screen top-0 left-o right-0 bottom-0 flex '  >
                 <div style={{ background : "rgba(0,0,0,0.66)"}} 
                     onClick={ ( ) => {props.closeModal()}}
                     className='w-2/3'>
@@ -36,9 +36,14 @@ export default function AddGamesFromLibrary(props){
                     </div>
                 </div>
             </div>
+            break;
         case "proposeTrade":
-            content = <AddGameSideTable AddGamesFromLibrary={AddGamesFromLibrary} action={action}/>
-    }
+            content = 
+                <AddGameSideTable AddGamesFromLibrary={AddGamesFromLibrary} action={action}/>
+            break;
+        default :
+            console.log("Issue on AddGamesFromLibrary")
+        }
 
-    return content
+    return (content)
 }

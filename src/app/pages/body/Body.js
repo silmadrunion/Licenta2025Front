@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes ,Route, Link } from "react-router-dom";
 
 export default function Body() {
     return (
-    <div className="body bg-[#352D39] text-white h-screen" > 
+    <div className="body bg-[#352D39] text-white w-full h-full pb-12" > 
         <Router>
             <div>
                 <Header/>

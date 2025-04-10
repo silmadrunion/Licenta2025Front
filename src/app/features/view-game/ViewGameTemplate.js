@@ -10,7 +10,7 @@ export default function ViewGameTemplate(props){
         <div className=" flex ">
             <div className="flex flex-col w-1/5 mr-6">
                     <div className=" h-3/6 border-2 border-indigo-500">img here</div>
-                    {/* <img></img> */}
+                    {/* <img alt=""></img> */}
                     <div className='flex justify-around mt-4'>
                         <button><FontAwesomeIcon icon={faArrowLeft}  className='text-[#B1EDE8] text-3xl'/></button>
                         <button><FontAwesomeIcon icon={faArrowRight} className='text-[#B1EDE8] text-3xl'/></button>
@@ -18,7 +18,7 @@ export default function ViewGameTemplate(props){
 
             </div>
 
-            <div className="flex  flex-col">
+            <div className="flex flex-col">
                 <div className="flex flex-col">
                         <div>
                             <h4 className='text-xl font-bold mb-4 '>{gameData.gameDetails.gameName}</h4>
@@ -86,7 +86,7 @@ export default function ViewGameTemplate(props){
                             <div>
                                 <p className='font-bold'>Seller</p>
                                 <div className=" h-40  border-2 border-indigo-500">img here</div>
-                                <img></img>
+                                <img alt=""></img>
                             </div>
                             <div>
                                 <p>{gameData.gameUserDetails.gameUserName}</p>
