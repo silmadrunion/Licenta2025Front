@@ -8,6 +8,7 @@ export default function AddGamesFromLibrary(props){
      let action = props.action
 
         useEffect(() => {
+            //to update id 
             fetch( "http://127.0.0.1:5000/game?user-id=somethinng", {
             method: "GET",
             headers: {"Accept": "application/json"}

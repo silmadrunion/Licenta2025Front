@@ -16,7 +16,7 @@ export default function ViewGameModal(props){
     let currentPage = props.currentPage
 
     useEffect(() => {
-        //to update id 
+        //to update id + build based on page listing or game here
         fetch( "http://127.0.0.1:5000//listing?listing-id=something", {
         method: "GET",
         headers: {"Accept": "application/json"}

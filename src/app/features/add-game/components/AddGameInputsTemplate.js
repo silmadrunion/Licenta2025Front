@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft,faArrowRight,faStar } from '@fortawesome/free-solid-svg-icons'
-
+import { useForm } from 'react-hook-form'
 
 
 // TO DO 
-export default function AddGameInputsTemplate(){
+export default function AddGameInputsTemplate(props){
 
+    let editGameData = props.editGameData
+
+    //this will come from endpoint 
     let gameIamagesProvided = false
 
     //code for auto resize of text area name testarea
@@ -13,6 +16,10 @@ export default function AddGameInputsTemplate(){
         element.style.height = "1px";
         element.style.height = (25+element.scrollHeight)+"px";
       }
+
+
+    const { gameForm } = useForm();
+
 
     return (
         <div className=" flex ">
@@ -26,11 +33,11 @@ export default function AddGameInputsTemplate(){
 
             </div>
 
-            <div className="flex  flex-col">
+            <form className="flex  flex-col">
                 <div className="flex flex-col">
                         <div>
                             <label className='text-xl font-semibold mb-4 flex' > Game Name
-                                <input id='gameName' placeholder='enter game name here' className='text-black font-normal h-5 self-center p-2 py-4 rounded-md ml-4'/>
+                                <input  id='gameName' placeholder='enter game name here' className='text-black font-normal h-5 self-center p-2 py-4 rounded-md ml-4'/>
                             </label>
                             <textarea name='testarea' id='gameDescription' className='text-black font-normal w-full h-1/4 self-center mb-4 rounded-md  ' placeholder='enter game description here'/>
                         </div>
@@ -117,7 +124,7 @@ export default function AddGameInputsTemplate(){
                         </div>
                     </div>            
                 </div>
-            </div>
+            </form>
 
 
         </div>

@@ -2,6 +2,8 @@ import AddGameInputsTemplate from "./AddGameInputsTemplate"
 import React, { useEffect } from "react";
 import $ from 'jquery';
 
+
+
 export default function AddGamesToLibary(props){
 
     function addGameToLibrary(){
@@ -33,13 +35,14 @@ export default function AddGamesToLibary(props){
       })
         props.closeModal()
 
-        props.refreshTable()
+        // to be replaced 
+        //props.refreshTable()
 
     }
 
 
     return (
-        <div className='absolute grid w-screen h-screen top-0 left-o right-0 bottom-0 flex '>
+        <div className='absolute grid w-full h-full top-0 left-o right-0 bottom-0 flex '>
             <div className='  w-screen h-screen top-0 left-o right-0 bottom-0 flex'
                 style={{ background : "rgba(0,0,0,0.66)"}} 
                 onClick={ ( ) => {props.closeModal()}}
@@ -52,10 +55,7 @@ export default function AddGamesToLibary(props){
                     <button className='border-1 bg-[#6e908d] p-1 px-4  rounded-full' onClick={ ( ) => {props.closeModal()}}>Cancel</button>
                     <button className='border-1 bg-[#86B0AC] p-1 px-4 ml-4 rounded-full' onClick={addGameToLibrary}>Add Game To Libary</button>
                 </div>
-
-
             </div>
-            
         </div>
     )
 }
