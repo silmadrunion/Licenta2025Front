@@ -5,12 +5,15 @@ import { useState, useEffect } from 'react'
 
 export default function ViewGameModal(props){
 
+    
+
     const[ ViewGameModal, setViewGameModal] = useState({
         data : undefined,
         action : props.action
     })
 
     let action = props.action
+    let currentPage = props.currentPage
 
     useEffect(() => {
         //to update id 
@@ -26,13 +29,11 @@ export default function ViewGameModal(props){
             }
             ))
             .catch( err => console.log(err))
-            console.log(ViewGameModal)
     }, [])
 
     function actionProposeTrade(){
 
         if(action =="viewGame"){
-            console.log("view game action")
             setViewGameModal(
                 {
                     ...ViewGameModal,
@@ -40,9 +41,29 @@ export default function ViewGameModal(props){
                 }
                 )
         }
-        console.log("outside")
         //propose trade integration 
-        
+    }
+
+
+    //buttons
+    let buttons 
+    switch(currentPage){
+        case "homePage":
+            buttons = <button className='border-1 bg-[#86B0AC] p-1 px-4 ml-4 rounded-full' onClick={  () => {actionProposeTrade()} }>Propose Trade</button>
+        break;
+        case "listingsPage":
+            buttons = undefined
+        break;
+        case "offersPage":
+            //offers buttons
+            buttons = undefined
+        break;
+        case "libraryPage":
+            //library buttons
+            buttons = undefined
+        break;
+        default :
+            console.log("Issue on ViewGameModal")
     }
 
     return (
@@ -66,7 +87,7 @@ export default function ViewGameModal(props){
                 </div>
                 <div className='flex flex-row justify-end mt-6'>
                     <button className='border-1 bg-[#6e908d] p-1 px-4  rounded-full' onClick={ ( ) => {props.closeModal()}}>Cancel</button>
-                    <button className='border-1 bg-[#86B0AC] p-1 px-4 ml-4 rounded-full' onClick={  () => {actionProposeTrade()} }>Propose Trade</button>
+                    {buttons}
                 </div>
             </div>
             

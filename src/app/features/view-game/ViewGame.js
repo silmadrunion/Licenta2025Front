@@ -7,7 +7,7 @@ import ViewGameModal from './ViewGameModal'
 
 export default function ViewGame(props) {
 
-    // let currentPage = props.currentPage
+    let currentPage = props.currentPage
     
     const [viewGame, setViewGame] = useState(false)
 
@@ -20,7 +20,7 @@ export default function ViewGame(props) {
             <button onClick={ () => { setViewGame(!viewGame) } }>
                 <FontAwesomeIcon className='icon' icon={faEye} />
             </button>
-            { viewGame ? <ViewGameModal closeModal={closeModal} action={"viewGame"}/> : ( <div className="hidden"/> )}
+            { viewGame ? <ViewGameModal closeModal={closeModal} action={"viewGame"} currentPage={currentPage}/> : ( <div className="hidden"/> )}
         </div>
     )
 }
