@@ -6,7 +6,6 @@ export default function ViewGameTemplate(props){
     let gameData = props.gameData
 
     return (
-
         <div className=" flex ">
             <div className="flex flex-col w-1/5 mr-6">
                     <div className=" h-3/6 border-2 border-indigo-500">img here</div>
@@ -15,7 +14,6 @@ export default function ViewGameTemplate(props){
                         <button><FontAwesomeIcon icon={faArrowLeft}  className='text-[#B1EDE8] text-3xl'/></button>
                         <button><FontAwesomeIcon icon={faArrowRight} className='text-[#B1EDE8] text-3xl'/></button>
                     </div>
-
             </div>
 
             <div className="flex flex-col">
@@ -71,7 +69,6 @@ export default function ViewGameTemplate(props){
                             </div>  
                         </div>  
                     </div>
- 
 
                     <div className="flex flex-row w-3/6 ml-6 border-2 border-[#B1EDE8] rounded-md p-4 ">
                         <div className=" w-4/6 grid gap-1 mr-4">
