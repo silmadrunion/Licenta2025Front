@@ -1,12 +1,12 @@
 import AddGameInputsTemplate from "./AddGameInputsTemplate"
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import $ from 'jquery';
 
 
 
 export default function AddGamesToLibary(props){
 
-    function addGameToLibrary(){
+    function handleAddGameToLibrary(){
 
     fetch('http://127.0.0.1:5000/game', {
         method: 'POST',
@@ -33,7 +33,8 @@ export default function AddGamesToLibary(props){
             }
         })
       })
-        props.closeModal()
+//ENABLE AFTER DONE WORK
+        //props.closeModal()
 
         // to be replaced 
         //props.refreshTable()
@@ -47,15 +48,7 @@ export default function AddGamesToLibary(props){
                 style={{ background : "rgba(0,0,0,0.66)"}} 
                 onClick={ ( ) => {props.closeModal()}}
             ></div>
-            <div className='bg-[#6D435A] absolute place-self-center p-6 px-8 rounded-md flex flex-col'>
-                <div className='flex flex-row'> 
-                    <AddGameInputsTemplate />
-                </div>
-                <div className='flex flex-row justify-end mt-6'>
-                    <button className='border-1 bg-[#6e908d] p-1 px-4  rounded-full' onClick={ ( ) => {props.closeModal()}}>Cancel</button>
-                    <button className='border-1 bg-[#86B0AC] p-1 px-4 ml-4 rounded-full' onClick={addGameToLibrary}>Add Game To Libary</button>
-                </div>
-            </div>
+                <AddGameInputsTemplate closeModal={props.closeModal} action={"addGame"} handleSubmitForm={handleAddGameToLibrary}/>
         </div>
     )
 }

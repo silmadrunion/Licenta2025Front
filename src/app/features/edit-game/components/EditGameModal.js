@@ -9,7 +9,7 @@ export default function EditGameModal(props){
     let gameId = props.gameId
     let currentPage = props.currentPage
 
-    const [ editGameData, setEditGameData ] = useState()
+    const [ editGameData, setEditGameData ] = useState(undefined)
 
 
     let link 
@@ -17,6 +17,7 @@ export default function EditGameModal(props){
         case "libraryPage":
             link = `http://127.0.0.1:5000//game?game-id=${gameId}`
             break;
+            //other pages here 
         default :
             link = undefined
     }
@@ -59,7 +60,8 @@ export default function EditGameModal(props){
                 }
             })
           })
-            props.closeModal()
+    //ENABLE AFTER DONE WORK
+        //props.closeModal()
 
             // to be replaced 
             //props.refreshTable()
@@ -72,17 +74,9 @@ export default function EditGameModal(props){
         <div className='absolute grid w-full h-full top-0 left-o right-0 bottom-0 flex '>
             <div className='  w-screen h-screen top-0 left-o right-0 bottom-0 flex'
                 style={{ background : "rgba(0,0,0,0.66)"}} 
-                onClick={ ( ) => {props.closeModal()}}
-            ></div>
-            <div className='bg-[#6D435A] absolute place-self-center p-6 px-8 rounded-md flex flex-col'>
-                <div className='flex flex-row'> 
-                    <AddGameInputsTemplate editGameData={editGameData}/>
-                </div>
-                <div className='flex flex-row justify-end mt-6'>
-                    <button className='border-1 bg-[#6e908d] p-1 px-4  rounded-full' onClick={ ( ) => {props.closeModal()}}>Cancel</button>
-                    <button className='border-1 bg-[#86B0AC] p-1 px-4 ml-4 rounded-full' onClick={handleUpdateGameToLibrary}>Save Changes</button>
-                </div>
+                onClick={ ( ) => {props.closeModal()}} >
             </div>
+            { editGameData ? <AddGameInputsTemplate editGameData={editGameData} action={"editGame"} closeModal={props.closeModal} handleSubmitForm={handleUpdateGameToLibrary}/> : <div></div> }
         </div>
     )
 
