@@ -42,7 +42,6 @@ export default function EditGameModal(props){
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                gameDetails : {
                     // gameImagesProvided :  ,
                     gameName : $("#gameName")[0].value,
                     gameDescriptionByClient: $("#gameDescriptionByClient")[0].value,
@@ -57,18 +56,15 @@ export default function EditGameModal(props){
                     gameArtists: [ $("#gameArtists")[0].value.split(",") ] ,
                     gameMechanisms: [ $("#gameMechanisms")[0].value.split(",") ] ,
                     gameCategories : [ $("#gameCategories")[0].value.split(",") ] 
-                }
             })
-          })
-    //ENABLE AFTER DONE WORK
-        //props.closeModal()
+        })
+
+        props.closeModal()
 
             // to be replaced 
             //props.refreshTable()
     
         }
-
-
 
     return (
         <div className='absolute grid w-full h-full top-0 left-o right-0 bottom-0 flex '>

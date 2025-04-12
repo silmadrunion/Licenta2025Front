@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form'
 export default function AddGameInputsTemplate(props){
 
     let action = props.action
-    let editGameData = props.editGameData
+    let editGameData = props.editGameData ? props.editGameData  : false
     console.log(editGameData)
     //this will come from endpoint 
     let gameIamagesProvided = false
@@ -21,7 +21,8 @@ export default function AddGameInputsTemplate(props){
 
 
       //useForm Hook
-    const   { 
+
+    const  { 
             register,
             handleSubmit,
             setError,
@@ -29,19 +30,18 @@ export default function AddGameInputsTemplate(props){
             } = useForm(
                 {
                     defaultValues : {
-                        gameName : "editGameData.length > 0 ?editGameData.gameDetails.gameName : ",
-                        gameDescription : "",
-                        gamePlayerNo : "",
-                        gameRecommandedAge : "",
-                        gamePlayTime : "",
-                        gameComplexity : "",
-                        gameDesigners : "",
-                        gameArtists : "",
-                        gameBGGRating : "",
-                        gameMechanisms : "",
-                        gameCategories : "",
-                        gameDescriptionByClient : ""
-
+                        gameName : editGameData ? editGameData.gameDetails.gameName : "",
+                        gameDescription : editGameData ? editGameData.gameDetails.gameDescription : "",
+                        gamePlayerNo : editGameData ? editGameData.gameDetails.gamePlayerNo : "",
+                        gameRecommandedAge : editGameData ? editGameData.gameDetails.gameReccommandedAge : "",
+                        gamePlayTime :  editGameData ? editGameData.gameDetails.gamePlayTime : "",
+                        gameComplexity : editGameData ? editGameData.gameDetails.gameComplexity : "",
+                        gameDesigners : editGameData ? editGameData.gameDetails.gameDesigners : "",
+                        gameArtists : editGameData ? editGameData.gameDetails.gameArtists : "",
+                        gameBGGRating : editGameData ? editGameData.gameDetails.gameBGGRating : "",
+                        gameMechanisms : editGameData ? editGameData.gameDetails.gameMechanisms : "",
+                        gameCategories : editGameData ? editGameData.gameDetails.gameCategories : "",
+                        gameDescriptionByClient : editGameData ? editGameData.gameDetails.gameDescriptionByClient : "",
                     }
                 }
             );

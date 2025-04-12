@@ -15,7 +15,6 @@ export default function AddGamesToLibary(props){
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            gameDetails : {
                 // gameImagesProvided :  ,
                 gameName : $("#gameName")[0].value,
                 gameDescriptionByClient: $("#gameDescriptionByClient")[0].value,
@@ -30,11 +29,10 @@ export default function AddGamesToLibary(props){
                 gameArtists: [ $("#gameArtists")[0].value.split(",") ] ,
                 gameMechanisms: [ $("#gameMechanisms")[0].value.split(",") ] ,
                 gameCategories : [ $("#gameCategories")[0].value.split(",") ] 
-            }
         })
       })
-//ENABLE AFTER DONE WORK
-        //props.closeModal()
+
+        props.closeModal()
 
         // to be replaced 
         //props.refreshTable()
