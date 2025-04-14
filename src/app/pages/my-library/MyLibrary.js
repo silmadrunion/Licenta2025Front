@@ -13,7 +13,6 @@ export default function MyLibrary() {
 
     function refreshTable(){
         setLibraryPageState(libraryPageState+1)
-        console.log(libraryPageState)
     }
 
     return (

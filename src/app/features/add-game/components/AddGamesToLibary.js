@@ -31,12 +31,8 @@ export default function AddGamesToLibary(props){
                 gameCategories : [ $("#gameCategories")[0].value.split(",") ] 
         })
       })
-
         props.closeModal()
-
-        // to be replaced 
-        //props.refreshTable()
-
+        props.refreshTable()
     }
 
 

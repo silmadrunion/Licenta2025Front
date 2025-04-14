@@ -7,6 +7,7 @@ import AddGamesToLibary from './components/AddGamesToLibary'
 export default function AddGames(props){
 
     let currentPage = props.currentPage
+    let refreshTable = props.refreshTable
 
     const [addGame, setAddGame] = useState(false)
 
@@ -16,7 +17,7 @@ export default function AddGames(props){
 
     let modal 
     if ( currentPage == "libraryPage"){
-        modal = <AddGamesToLibary closeModal={closeModal} refreshTable={props.refreshTable}/>
+        modal = <AddGamesToLibary closeModal={closeModal} refreshTable={refreshTable}/>
     } else {
         modal = <AddGamesFromLibrary  closeModal={closeModal} action={"addGame"}/>
     }

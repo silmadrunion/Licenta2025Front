@@ -58,13 +58,9 @@ export default function EditGameModal(props){
                     gameCategories : [ $("#gameCategories")[0].value.split(",") ] 
             })
         })
-
         props.closeModal()
-
-            // to be replaced 
-            //props.refreshTable()
-    
-        }
+        props.refreshTable()
+    }
 
     return (
         <div className='absolute grid w-full h-full top-0 left-o right-0 bottom-0 flex '>

@@ -7,6 +7,8 @@ export default function ProposeTrade(props) {
 
     const [proposeTrade, setProposeTrade] = useState(false)
 
+    let currentPage = props.currentPage
+
     function closeModal(){
         setProposeTrade(false)
     }
@@ -16,7 +18,7 @@ export default function ProposeTrade(props) {
                 <button onClick={ () => { setProposeTrade(!proposeTrade) } }>
                     <FontAwesomeIcon className='icon' icon={faArrowRightArrowLeft}  />
                 </button>
-                { proposeTrade ? <ViewGameModal closeModal={closeModal} action={"proposeTrade"}/> : ( <div className="hidden"/> )}
+                { proposeTrade ? <ViewGameModal closeModal={closeModal} action={"proposeTrade"} currentPage={currentPage}/> : ( <div className="hidden"/> )}
             </div>
     )
 }

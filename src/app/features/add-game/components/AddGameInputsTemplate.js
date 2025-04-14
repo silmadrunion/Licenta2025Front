@@ -9,7 +9,8 @@ export default function AddGameInputsTemplate(props){
     let action = props.action
     let editGameData = props.editGameData ? props.editGameData  : false
     console.log(editGameData)
-    //this will come from endpoint 
+
+    //this will come from endpoint, remove afetr 
     let gameIamagesProvided = false
 
     //code for auto resize of text area name testarea
@@ -17,10 +18,6 @@ export default function AddGameInputsTemplate(props){
     //     element.style.height = "1px";
     //     element.style.height = (25+element.scrollHeight)+"px";
     //   }
-
-
-
-      //useForm Hook
 
     const  { 
             register,
@@ -42,6 +39,7 @@ export default function AddGameInputsTemplate(props){
                         gameMechanisms : editGameData ? editGameData.gameDetails.gameMechanisms : "",
                         gameCategories : editGameData ? editGameData.gameDetails.gameCategories : "",
                         gameDescriptionByClient : editGameData ? editGameData.gameDetails.gameDescriptionByClient : "",
+                       
                     }
                 }
             );
@@ -51,7 +49,7 @@ export default function AddGameInputsTemplate(props){
         catch (error) { setError("root", { message: "Error occured."}) }
     }
 
-
+    
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className='bg-[#6D435A] absolute place-self-center p-6 px-8 rounded-md flex flex-col'>
@@ -154,7 +152,7 @@ export default function AddGameInputsTemplate(props){
                                         <input {...register("gameDescriptionByClient", { required : "Description is required. " })} id='gameDescriptionByClient' placeholder='describe the game condition' className='text-black font-normal h-5 self-center p-2 py-4 rounded-md'/>
                                         { errors.gameDescriptionByClient && <div className='text-red-500'> {errors.gameDescriptionByClient.message}</div> }
                                     </div>
-                                    <span className='font-semibold'>Pictures of the game provided: {gameIamagesProvided ? "Yes" : "No" } </span>
+                                    <span {...register("gameIamagesProvided")} id='gameIamagesProvided' className='font-semibold'>Pictures of the game provided: {gameIamagesProvided ? "Yes" : "No" } </span>
                                 </div>
                                 <div className=" w-2/6 grid gap-1">
                                     <div>

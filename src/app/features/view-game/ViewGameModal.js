@@ -41,7 +41,8 @@ export default function ViewGameModal(props){
                 }
                 )
         }
-        //propose trade integration 
+        //propose trade integration here
+        //redirect to 
     }
 
 
@@ -49,7 +50,7 @@ export default function ViewGameModal(props){
     let buttons 
     switch(currentPage){
         case "homePage":
-            buttons = <button className='border-1 bg-[#86B0AC] p-1 px-4 ml-4 rounded-full' onClick={  () => {actionProposeTrade()} }>Propose Trade</button>
+            buttons = <button className='border-1 bg-[#86B0AC] p-1 px-4 ml-4 rounded-full' onClick={  () => {actionProposeTrade()} }>Propose Trade </button>
         break;
         case "listingsPage":
             buttons = undefined
